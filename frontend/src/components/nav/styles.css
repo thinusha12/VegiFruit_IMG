@@ -1,0 +1,15 @@
+.logo {
+  width: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343A40;
+  height: 100px;
+  color: #FFF;
+}
