@@ -1,0 +1,14 @@
+const orderModel = require('../../models/OrderModel');
+
+const fetchOrdersByUserId = async (req, res) => {
+  try {
+    const user = req.query.user;
+    const orders = await orderModel.find({ user: user });
+    res.status(200).json({ message: "Successfully Fetched Data.", data: orders });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Something went Wrong!! Fetching Data Failed." });
+  }
+}
+
+module.exports = fetchOrdersByUserId;
